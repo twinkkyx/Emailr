@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <defs>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0v80" fill="none" stroke="#d8e0e8" stroke-width="2"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="800" fill="#f7faf8"/>
+  <rect width="1200" height="800" fill="url(#grid)" opacity=".65"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M805 155h225v140H805z" stroke="#f47b20" stroke-width="8"/>
+    <path d="m805 160 112 86 113-86" stroke="#f47b20" stroke-width="8"/>
+    <path d="M690 430h285v178H690z" stroke="#d79b22" stroke-width="9"/>
+    <path d="m690 438 142 108 143-108" stroke="#d79b22" stroke-width="9"/>
+    <path d="M160 135h250v156H160z" stroke="#17202a" stroke-width="8"/>
+    <path d="m160 143 125 96 125-96" stroke="#17202a" stroke-width="8"/>
+    <path d="M215 490c72 42 154 42 246 0M246 548c53 29 114 29 184 0" stroke="#c9535b" stroke-width="12"/>
+  </g>
+</svg>
