@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emailr | Email Etiquette Quest</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="login-screen" id="loginScreen" aria-labelledby="loginTitle">
+        <div class="login-art" aria-hidden="true">
+          <div class="coach-scene">
+            <div class="laptop">
+              <div class="screen">
+                <div class="email-line line-subject"></div>
+                <div class="email-line line-one"></div>
+                <div class="email-line line-two mistake"></div>
+                <div class="email-line line-three"></div>
+                <div class="email-line line-four mistake"></div>
+              </div>
+              <div class="keyboard"></div>
+            </div>
+            <div class="emailr-bot">
+              <div class="bot-mark">E</div>
+              <div class="scan-beam"></div>
+            </div>
+            <div class="mistake-bubble bubble-one">
+              <span>Tone</span>
+              Too pushy
+            </div>
+            <div class="mistake-bubble bubble-two">
+              <span>Ask</span>
+              Make it specific
+            </div>
+            <div class="mistake-bubble bubble-three">
+              <span>Subject</span>
+              Add action needed
+            </div>
+          </div>
+        </div>
+
+        <form class="login-card" id="loginForm">
+          <p class="eyebrow">Emailr</p>
+          <h1 id="loginTitle">A gamified email etiquette learning platform</h1>
+
+          <label>
+            First name
+            <input id="nameInput" name="name" autocomplete="given-name" placeholder="Maya" required />
+          </label>
+
+          <label>
+            Grade
+            <select id="gradeInput" name="grade">
+              <option>9th grade</option>
+              <option>10th grade</option>
+              <option>11th grade</option>
+              <option>12th grade</option>
+            </select>
+          </label>
+
+          <button class="primary-action" type="submit">Start Emailr</button>
+        </form>
+      </section>
+
+      <section class="quest-screen is-hidden" id="questScreen" aria-labelledby="taskTitle">
+        <header class="quest-topbar">
+          <div class="brand">
+            <div class="brand-mark" aria-hidden="true">E</div>
+            <div>
+              <strong>Emailr</strong>
+              <span id="studentLine">Email etiquette quest</span>
+            </div>
+          </div>
+
+          <div class="stats">
+            <div>
+              <span id="xpValue">0</span>
+              <small>XP</small>
+            </div>
+            <div>
+              <span id="taskCount">1/20</span>
+              <small>Task</small>
+            </div>
+            <button class="login-link" id="backToLoginBtn" type="button">Login</button>
+          </div>
+        </header>
+
+        <div class="progress-wrap" aria-label="Course progress">
+          <span id="progressBar"></span>
+        </div>
+
+        <section class="task-stage" id="taskStage">
+          <article class="task-card">
+            <div class="task-meta">
+              <span id="taskNumber">Task 01</span>
+              <span id="taskType">Subject lines</span>
+            </div>
+            <h1 id="taskTitle"></h1>
+            <div class="section-label learn-label">Step 1</div>
+            <div class="teach-block">
+              <span>What this teaches</span>
+              <p id="taskLesson" class="lesson-copy"></p>
+              <ul id="principleList" class="principle-list"></ul>
+            </div>
+
+            <div class="section-label practice-step">Step 2</div>
+            <div class="practice-label" id="activityLabel"></div>
+            <div class="practice-block">
+              <div class="scenario" id="scenarioBox"></div>
+              <div class="options" id="optionsBox"></div>
+            </div>
+
+            <div class="feedback" id="feedbackBox" role="status" aria-live="polite"></div>
+
+            <div class="task-actions">
+              <button class="ghost-action" id="restartBtn" type="button">Restart</button>
+              <button class="primary-action" id="nextBtn" type="button" disabled>Next task</button>
+            </div>
+          </article>
+        </section>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
