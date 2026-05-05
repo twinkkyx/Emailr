@@ -3,123 +3,186 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Emailr | Email Etiquette Quest</title>
+    <title>Theo | Poetry Identity Lab</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <main class="shell">
       <section class="login-screen" id="loginScreen" aria-labelledby="loginTitle">
-        <div class="login-art" aria-hidden="true">
-          <div class="coach-scene">
-            <div class="laptop">
-              <div class="screen">
-                <div class="email-line line-subject"></div>
-                <div class="email-line line-one"></div>
-                <div class="email-line line-two mistake"></div>
-                <div class="email-line line-three"></div>
-                <div class="email-line line-four mistake"></div>
-              </div>
-              <div class="keyboard"></div>
+        <div class="hero-panel" aria-hidden="true">
+          <div class="orbit-card card-one">
+            <span>Rilke</span>
+            Image logic + solitude
+          </div>
+          <div class="orbit-card card-two">
+            <span>Dickinson</span>
+            Compression + voltage
+          </div>
+          <div class="poem-window">
+            <div class="window-bar">
+              <span></span>
+              <span></span>
+              <span></span>
             </div>
-            <div class="emailr-bot">
-              <div class="bot-mark">E</div>
-              <div class="scan-beam"></div>
+            <div class="purple-core">
+              <div class="signature-ring"></div>
+              <strong>Theo</strong>
             </div>
-            <div class="mistake-bubble bubble-one">
-              <span>Tone</span>
-              Too pushy
+            <div class="verse-lines">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
             </div>
-            <div class="mistake-bubble bubble-two">
-              <span>Ask</span>
-              Make it specific
-            </div>
-            <div class="mistake-bubble bubble-three">
-              <span>Subject</span>
-              Add action needed
-            </div>
+          </div>
+          <div class="api-badge">
+            <span>fine-tuned clone mesh</span>
+            personalization vector syncing
           </div>
         </div>
 
         <form class="login-card" id="loginForm">
-          <p class="eyebrow">Emailr</p>
-          <h1 id="loginTitle">A gamified email etiquette learning platform</h1>
+          <p class="eyebrow">Theo private beta</p>
+          <h1 id="loginTitle">Consult famous poet identities trained around your drafts.</h1>
+          <p class="intro">
+            Theo builds a living profile of your poetic instincts, then routes each draft to a digital poet
+            clone for more personal revision advice.
+          </p>
 
           <label>
-            First name
-            <input id="nameInput" name="name" autocomplete="given-name" placeholder="Maya" required />
+            Pen name
+            <input id="nameInput" name="name" autocomplete="name" placeholder="Mira" required />
           </label>
 
           <label>
-            Grade
-            <select id="gradeInput" name="grade">
-              <option>9th grade</option>
-              <option>10th grade</option>
-              <option>11th grade</option>
-              <option>12th grade</option>
+            Current poetic mode
+            <select id="modeInput" name="mode">
+              <option>lyric fragments</option>
+              <option>confessional free verse</option>
+              <option>narrative poems</option>
+              <option>surreal image studies</option>
+              <option>formal experiments</option>
             </select>
           </label>
 
-          <button class="primary-action" type="submit">Start Emailr</button>
+          <button class="primary-action" type="submit">Open Theo demo</button>
+          <p class="fine-print">Demo link simulation: no real API calls, but the interface behaves like an API-backed prototype.</p>
         </form>
       </section>
 
-      <section class="quest-screen is-hidden" id="questScreen" aria-labelledby="taskTitle">
-        <header class="quest-topbar">
+      <section class="app-screen is-hidden" id="appScreen" aria-labelledby="workspaceTitle">
+        <header class="topbar">
           <div class="brand">
-            <div class="brand-mark" aria-hidden="true">E</div>
+            <div class="brand-mark" aria-hidden="true">T</div>
             <div>
-              <strong>Emailr</strong>
-              <span id="studentLine">Email etiquette quest</span>
+              <strong>Theo</strong>
+              <span id="userLine">Poetry identity lab</span>
             </div>
           </div>
 
-          <div class="stats">
-            <div>
-              <span id="xpValue">0</span>
-              <small>XP</small>
+          <div class="topbar-actions">
+            <div class="api-status" aria-label="API status">
+              <span></span>
+              clone API online
             </div>
-            <div>
-              <span id="taskCount">1/20</span>
-              <small>Task</small>
-            </div>
-            <button class="login-link" id="backToLoginBtn" type="button">Login</button>
+            <button class="icon-action" id="fingerprintBtn" type="button" aria-label="Open poetry identity profile">
+              <span class="fingerprint-icon" aria-hidden="true"></span>
+            </button>
+            <button class="ghost-action" id="logoutBtn" type="button">Login</button>
           </div>
         </header>
 
-        <div class="progress-wrap" aria-label="Course progress">
-          <span id="progressBar"></span>
-        </div>
-
-        <section class="task-stage" id="taskStage">
-          <article class="task-card">
-            <div class="task-meta">
-              <span id="taskNumber">Task 01</span>
-              <span id="taskType">Subject lines</span>
+        <section class="workspace">
+          <aside class="identity-panel" aria-label="AI poet identity selection">
+            <div class="panel-heading">
+              <p class="eyebrow">Identity router</p>
+              <h2>Select an AI identity</h2>
             </div>
-            <h1 id="taskTitle"></h1>
-            <div class="section-label learn-label">Step 1</div>
-            <div class="teach-block">
-              <span>What this teaches</span>
-              <p id="taskLesson" class="lesson-copy"></p>
-              <ul id="principleList" class="principle-list"></ul>
-            </div>
+            <div class="poet-list" id="poetList"></div>
 
-            <div class="section-label practice-step">Step 2</div>
-            <div class="practice-label" id="activityLabel"></div>
-            <div class="practice-block">
-              <div class="scenario" id="scenarioBox"></div>
-              <div class="options" id="optionsBox"></div>
+            <div class="mixer-card">
+              <div>
+                <p class="eyebrow">Dynamic guidance</p>
+                <h3>Mix poet personalities</h3>
+              </div>
+              <p>
+                Blend distinct poet clones to synthesize feedback across tone, structure, image, and emotional risk.
+              </p>
+              <div class="mix-options" id="mixOptions"></div>
+              <button class="secondary-action" id="applyMixBtn" type="button">Apply blend</button>
             </div>
 
-            <div class="feedback" id="feedbackBox" role="status" aria-live="polite"></div>
-
-            <div class="task-actions">
-              <button class="ghost-action" id="restartBtn" type="button">Restart</button>
-              <button class="primary-action" id="nextBtn" type="button" disabled>Next task</button>
+            <div class="dataset-card">
+              <span>Expanded corpus active</span>
+              <strong>18,420</strong>
+              annotated poems, letters, marginalia, interviews, meter scans, and workshop notes
             </div>
-          </article>
+          </aside>
+
+          <section class="chat-panel" aria-labelledby="workspaceTitle">
+            <div class="chat-hero">
+              <div>
+                <p class="eyebrow">Consultation room</p>
+                <h1 id="workspaceTitle">Paste a poem draft or idea.</h1>
+                <p id="activeIdentityLine">Choose a poet identity to begin.</p>
+              </div>
+              <div class="model-chip" id="modelChip">awaiting identity</div>
+            </div>
+
+            <div class="chat-log" id="chatLog" aria-live="polite"></div>
+
+            <form class="composer" id="chatForm">
+              <label for="draftInput">Draft or idea</label>
+              <textarea
+                id="draftInput"
+                placeholder="Paste a stanza, a poem idea, or a messy image cluster..."
+                required
+              ></textarea>
+              <div class="composer-actions">
+                <div class="simulated-call" id="simulatedCall">POST /v1/theo/guidance</div>
+                <button class="primary-action" type="submit">Ask for guidance</button>
+              </div>
+            </form>
+          </section>
+
+          <aside class="memory-panel" aria-label="Saved guidance and personalization">
+            <div class="panel-heading">
+              <p class="eyebrow">Stored chats</p>
+              <h2>Guidance memory</h2>
+            </div>
+            <div class="thread-list" id="threadList"></div>
+
+            <article class="personalization-card" id="poetPersonalization">
+              <p class="eyebrow">Poet personalization</p>
+              <h3>Open a poet heading</h3>
+              <p>
+                Click a saved poet thread to see how that clone has adapted to your recurring poetic habits.
+              </p>
+            </article>
+          </aside>
         </section>
       </section>
+
+      <div class="modal-backdrop is-hidden" id="profileModal" role="dialog" aria-modal="true" aria-labelledby="profileTitle">
+        <section class="profile-modal">
+          <button class="close-action" id="closeProfileBtn" type="button" aria-label="Close profile">x</button>
+          <p class="eyebrow">Poetry fingerprint</p>
+          <h2 id="profileTitle">Your poetry identity</h2>
+          <p id="profileIntro"></p>
+          <div class="fingerprint-viz" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="identity-grid" id="identityGrid"></div>
+          <div class="signal-card">
+            <span>Profile confidence</span>
+            <div class="confidence-bar"><i id="confidenceBar"></i></div>
+            <strong id="confidenceLabel">37%</strong>
+          </div>
+        </section>
+      </div>
     </main>
 
     <script src="app.js"></script>
